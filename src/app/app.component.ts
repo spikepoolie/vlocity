@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  logoimage = 'https://goemobile.com/vlocity/images/logo.jpg';
 }

@@ -1,0 +1,13 @@
+$container-width: 50%;
+
+.container {
+  width: $container-width;
+}
+
+.content {
+    max-width: $container-width;
+    margin: auto;
+    background: white;
+    padding: 10px;
+}
+

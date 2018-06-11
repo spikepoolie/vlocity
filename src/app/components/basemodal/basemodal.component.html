@@ -1,0 +1,23 @@
+<div *ngIf="isBaseModalShown" [config]="{ show: isBaseModalShown }" (onHidden)="onHidden()" mdbModal #basicBaseModal="mdb-modal" class="modal fade right"
+  tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true" [config]="{backdrop: false, ignoreBackdropClick: true}">
+  <div class="modal-dialog modal-full-height modal-right" style="width:550px;" role="document">
+    <div class="modal-content">
+      <h5 class="card-header primary-color white-text text-center" id="myModalLabel">My Messages ({{usermessages.length}})</h5>
+      <div class="modal-body">
+        <div style="overflow:auto;">
+          <div *ngFor="let msg of usermessages" class="padding10">
+            <span class="boldblue">From:</span> {{msg.message_to}}<br>
+            <span class="boldblue">Message:</span> {{msg.message_content}}<hr>
+
+            </div>
+          </div>
+        </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger relative waves-light" (click)="basicBaseModal.hide();" mdbRippleRadius>
+          <span>CLOSE</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

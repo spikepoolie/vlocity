@@ -1,0 +1,18 @@
+<div class="content">
+  <div class="topmargin">
+  <form class="form-inline">
+    <input
+        type="text"
+        class="form-control form-control-sm ml-3 w-75"
+        name="doc_name"
+        [(ngModel)]="searchText"
+        placeholder="Search"
+        aria-label="Search"
+        (keyup)="onKey($event)"
+      >
+      &nbsp;&nbsp;<i class="fa fa-search" aria-hidden="true"></i>
+      &nbsp;&nbsp;<i class="fa fa-close" aria-hidden="true" [style.display]="shouldShow ? 'inline' : 'none'" (click)="clearSearch();"></i>
+  </form>
+  <p>{{values}}</p>
+  </div>
+</div>

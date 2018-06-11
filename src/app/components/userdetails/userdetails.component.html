@@ -1,0 +1,39 @@
+<div [style.display]='hasUserDetailData ? "inline" : "none"'>
+  <div class="detail_box_top_margin">
+    <div class="row">
+      <div class="col">
+          <div class="card text-center">
+            <div class="card-header amber-color white-text">
+              <span class="input-group-text" style="float:right;"><i class="fa fa-close red-text" aria-hidden="true" (click)="closePanel()"></i></span>
+              <img class="thumbnailHeader" src="{{userDetails.img}}">
+            </div>
+            <div class="card-body">
+              <h4 class="card-title">{{userDetails.name}}&nbsp;&nbsp;&nbsp;<span *ngFor="let item of createRange(userDetails.rating)"><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span *ngFor="let item of createRange(maxRatingStars-userDetails.rating)"><i class="fa fa-star-o" aria-hidden="true"></i></span></h4>
+                <div class="card">
+                  <div class="card-body">
+                    <p class="userDetailDescription">{{userDetails.Description}}</p>
+                    <table class="table table-bordered" cellspacing="6">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="text-center likes likescolor">Likes&nbsp;&nbsp;<i class="fa fa-thumbs-o-up green-text" aria-hidden="true"></i></div>
+                            <div class="likedislikeclass" [ngClass]='i % 2 === 0 ? "listItemBackround" : ""' *ngFor="let likes of userDetails.Likes; let i = index">{{likes}}</div>
+                          </td>
+                          <td>
+                            <div class="text-center likes dislikescolor">Dislikes&nbsp;&nbsp;<i class="fa fa-thumbs-o-down red-text" aria-hidden="true"></i></div>
+                            <div class="likedislikeclass" [ngClass]='i % 2 === 0 ? "listItemBackround" : ""' *ngFor="let dislikes of userDetails.Dislikes; let i = index">{{dislikes}}</div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="sendmessagebuttompadding"><a class="btn btn-success btn-lg" (click)="openCloseModal()"><i class="fa fa-commenting-o " aria-hidden="true"></i>&nbsp;&nbsp;send message</a></div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<app-messanger></app-messanger>

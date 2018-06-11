@@ -1,0 +1,48 @@
+table td {
+    padding: 0;
+}
+
+.detail_box_top_margin {
+  margin-top:26px;
+}
+
+.userDetailDescription {
+  font-size:14pt;
+  color:lightgray;
+}
+
+.thumbnailHeader {
+  height:120px;
+  border-radius: 50%;
+}
+
+.likes {
+  border-bottom:0.5px solid lightgray;
+  padding:10px;
+  font-size:14pt;
+  font-weight:bold;
+
+}
+
+.likes {
+  &.likescolor{
+    color:green;
+  }
+  &.dislikescolor{
+    color:red;
+  }
+}
+
+.likedislikeclass {
+  border-bottom:0.5px solid lightgray;
+  padding:10px;
+}
+
+.sendmessagebuttompadding {
+  padding:5px;
+  margin-top:8px;
+}
+
+
+
+

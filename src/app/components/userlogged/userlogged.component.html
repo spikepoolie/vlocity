@@ -1,0 +1,20 @@
+<div class=" col pull-right;">
+  <div>
+      <span>{{username}}</span>
+      &nbsp;&nbsp;
+      <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+      &nbsp;&nbsp;<i [ngClass]="!showOptions ? 'fa-chevron-right' : 'fa-chevron-down'"class="fa " aria-hidden="true" (click)="getMessagesCount(); showOptions = !showOptions"></i>
+    </div>
+    <div  [style.display]="showOptions ? 'inline' : 'none'">
+      <ul class="list-group">
+        <li (click)="openBaseModal();" class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+         Messages
+          <span class="badge badge-success badge-pill">{{messagesCount}}</span>
+        </li>
+
+        <li class="list-group-item d-flex list-group-item-warning justify-content-between align-items-center">
+          Log Off
+        </li>
+      </ul>
+    </div>
+</div>
